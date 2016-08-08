@@ -75,7 +75,7 @@ class Awye_Recent_F extends WP_Widget {
 		<?php while ( $first_query->have_posts() ) : $first_query->the_post(); ?>
 
 		<?php if( $counter == 1 ) : ?>
-			<div class="recent-post first-post clearfix col-md-7 col-sm-7 col-xs-7">
+			<div class="recent-post first-post clearfix col-xs-12">
 			<?php if ( has_post_thumbnail() ) : ?>
 				<div class="recent-thumb">
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" >
@@ -101,7 +101,7 @@ class Awye_Recent_F extends WP_Widget {
 
 		?>
 
-		<div class="col-md-5 col-sm-5 col-xs-5">
+		<div class="col-xs-12">
 		<?php while ( $secound_query->have_posts() ) : $secound_query->the_post(); ?>
 		<div class="recent-post clearfix">
 				<div class="recent-thumb col-md-3 col-sm-3 col-xs-3">

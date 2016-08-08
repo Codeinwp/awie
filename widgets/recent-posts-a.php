@@ -65,7 +65,7 @@ class Awye_Recent_A extends WP_Widget {
 
 		<?php if( $counter == 1 ) : ?>
 			<div class="recent-post first-post clearfix">
-				<div class="recent-thumb col-md-7 col-sm-7 col-xs-7">
+				<div class="recent-thumb col-xs-12">
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" >
 						<?php if ( has_post_thumbnail() ) : ?>
 							<?php the_post_thumbnail('carousel-thumb'); ?>
@@ -74,14 +74,14 @@ class Awye_Recent_A extends WP_Widget {
 						<?php endif; ?>
 					</a>							
 				</div>	
-				<div class="recent-content col-md-5 col-sm-5 col-xs-5">
+				<div class="recent-content col-xs-12">
 					<?php the_title( sprintf( '<h3 class="entry-title"><a style="color:' . $text_color . '" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>	
 					<?php the_excerpt(); ?>
 					<a href="<?php the_permalink(); ?>" class="readmore"><?php _e('Read More', 'awie'); ?> <i class="fa fa-angle-right"></i></a>
 				</div>
 			</div>
 		<?php else : ?>	
-			<div class="recent-post col-md-4">
+			<div class="recent-post col-xs-12">
 				<div class="recent-thumb">
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" >
 						<?php if ( has_post_thumbnail() ) : ?>

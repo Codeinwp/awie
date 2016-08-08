@@ -4,9 +4,8 @@ Description: Awie is a free colorful magazine theme, suitable for a blog, news o
 Author: ThemeIsle
 Author URI: http://www.themeisle.com/
 Template: flymag
-Template Version: 1.14
-Tags: two-columns
-Version: 1.0.3
+Tags: two-columns, right-sidebar, custom-background, custom-colors, custom-menu, featured-images, sticky-post, threaded-comments, translation-ready
+Version: 1.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: awie
@@ -50,6 +49,7 @@ body {
 	background: transparent;
 	margin-top: 34px;
 	padding-right: 0;
+	text-align: right;
 }
 
 .main-navigation li {
@@ -63,6 +63,8 @@ body {
 
 .main-navigation a {
 	color: #333;
+	display: inline-block;
+	float: none;
 	font-size: 15px;
 	font-weight: 400;
 	line-height: 36px;
@@ -78,7 +80,7 @@ body {
 	border: none;
 }
 
-.fly-slider .owl-item .slide, 
+.fly-slider .owl-item .slide,
 .posts-slider .owl-item .slide {
 	height: 564px;
 	background-size: cover;
@@ -126,40 +128,40 @@ body {
 
 .fly-slider .owl-item:hover .carousel-overlay,
 .posts-slider .owl-item:hover .carousel-overlay {
-	background-color: rgba(0,0,0,0.85);
+	background-color: rgba(0, 0, 0, 0.85);
 }
 
 .fly-slider .owl-item .carousel-overlay,
-.posts-slider .owl-item .carousel-overlay  {
+.posts-slider .owl-item .carousel-overlay {
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
-.fly-slider .owl-item:nth-child(3n+1) .slide-title a, 
+.fly-slider .owl-item:nth-child(3n+1) .slide-title a,
 .posts-slider .owl-item:nth-child(3n+1) .slide-title a,
 .recent_posts_d .recent-post:nth-child(3n+1) .entry-title a {
 	border: 1px solid #e92736;
 	color: #e92736;
 }
 
-.fly-slider .owl-item:nth-child(3n+1) .slide, 
+.fly-slider .owl-item:nth-child(3n+1) .slide,
 .posts-slider .owl-item:nth-child(3n+1) .slide {
 	border-bottom: 10px solid #e92736;
 }
 
-.fly-slider .owl-item:nth-child(3n+2) .slide-title a, 
+.fly-slider .owl-item:nth-child(3n+2) .slide-title a,
 .posts-slider .owl-item:nth-child(3n+2) .slide-title a,
 .recent_posts_d .recent-post:nth-child(3n+2) .entry-title a {
 	border: 1px solid #ff5c36;
 	color: #ff5c36;
 }
 
-.fly-slider .owl-item:nth-child(3n+2) .slide, 
+.fly-slider .owl-item:nth-child(3n+2) .slide,
 .posts-slider .owl-item:nth-child(3n+2) .slide {
 	border-bottom: 10px solid #ff5c36;
 }
 
-.fly-slider .owl-item:nth-child(3n+3) .slide-title a, 
+.fly-slider .owl-item:nth-child(3n+3) .slide-title a,
 .posts-slider .owl-item:nth-child(3n+3) .slide-title a,
 .recent_posts_d .recent-post:nth-child(3n+3) .entry-title a {
 	border: 1px solid #ffe84c;
@@ -184,7 +186,7 @@ body {
 	left: 15px;
 }
 
-.fly-slider .owl-item:nth-child(3n+3) .slide, 
+.fly-slider .owl-item:nth-child(3n+3) .slide,
 .posts-slider .owl-item:nth-child(3n+3) .slide {
 	border-bottom: 10px solid #ffe84c;
 }
@@ -242,7 +244,6 @@ body {
 
 .widget .widget-title span,
 .widget.recent_posts_c .cat-title a {
-	background: #fff;
 	padding-right: 20px;
 }
 
@@ -307,7 +308,7 @@ body {
 	padding-left: 0;
 }
 
-.widget.recent_posts_a .recent-post h4.entry-title  {
+.widget.recent_posts_a .recent-post h4.entry-title {
 	font-size: 17px;
 	font-weight: 700;
 	line-height: 22px;
@@ -420,11 +421,15 @@ body {
 	padding-left: 0;
 }
 
+aside.widget {
+	margin: 20px auto;
+}
+
 .widget-area {
 	margin-left: 0;
 	padding-left: 30px;
+	margin-top: 30px;
 	border-left: 1px solid #ebebeb;
-	margin-top: 65px;
 	width: 330px;
 }
 
@@ -435,7 +440,7 @@ body {
 .widget input[type=search] {
 	border: 1px solid #ebebeb;
 	width: 100%;
-	padding: 26px 26px 26px 56px;
+	padding: 8px 8px 8px 28px;
 	background: rgba(0, 0, 0, 0.02);
 	color: #777;
 	font-size: 15px;
@@ -451,7 +456,7 @@ body {
 	font-family: "FontAwesome";
 	content: "\f002";
 	position: absolute;
-	left: 35px;
+	left: 10px;
 	top: 0; bottom: 0;
 	margin: auto;
 	height: 15px;
@@ -612,7 +617,14 @@ body {
 .hentry {
 	border: none;
 	padding: 0;
-	padding-top: 30px;
+}
+
+#primary {
+	margin-top: 30px;
+}
+
+article.post {
+	margin: 30px auto;
 }
 
 .site-main .comment-navigation, .site-main .paging-navigation, .site-main .post-navigation {
@@ -770,7 +782,6 @@ footer .container {
 		border-right: none;
 	}
 }
-
 
 @media (max-width: 1090px) and (min-width: 1024px) {
 	.widget-area {
